@@ -1,0 +1,226 @@
+*{margin: 0;padding: 0;list-style: none;}
+
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td /* table elements 表格元素 */ {
+  margin: 0;
+  padding: 0;
+}
+
+/** 设置默认字体 **/
+body,
+button, input, select, textarea /* for ie */ {
+  font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp { font-family: courier new, courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/** 重置列表元素 **/
+ul, ol { list-style: none; }
+
+/** 重置文本格式元素 **/
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+
+/** 重置表单元素 **/
+legend { color: #333; } /* for ie6 */
+fieldset, img { border: 0; } /* img 搭车：让链接里的 img 无边框 */
+button, input, select, textarea { font-size: 100%; } /* 使得表单元素在 ie 下能继承字体大小 */
+/* 注：optgroup 无法扶正 */
+
+/** 重置表格元素 **/
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* 清除浮动 */
+.ks-clear:after, .clear:after {
+  content: '\20';
+  display: block;
+  height: 0;
+  clear: both;
+}
+.ks-clear, .clear {
+  *zoom: 1;
+}
+
+body {
+  color: #333;
+  font-size: 14px;
+  font-family: 'Microsoft Yahei';
+}
+.container {
+  width: 100%;
+}
+.header {
+  background-color: #f7f7f7;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+  height: 50px;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  padding: 3px 15px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+}
+.header .header-back, .header .header-more {
+  color: #a7adc4;
+  line-height: 44px;
+  width: 15%;
+  font-size: 18px;
+  float: left;
+}
+.header .header-more {
+  text-align: right;
+}
+.header .header-con {
+  width: 70%;
+  float: left;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+}
+.header .header-con em {
+  color: #aeaeae;
+  display: block;
+  font-weight: 100;
+  font-size: 12px;
+}
+
+.content {
+  padding-top: 50px;
+  background-color: #fff;
+}
+
+.media {
+  padding: 0 15px;
+}
+.media h3 {
+  font-size: 16px;
+  padding: 10px 0;
+}
+.media p {
+  line-height: 1.7;
+}
+.media .media-imgs {
+  overflow: hidden;
+  margin-top: 15px;
+}
+.media .media-imgs .media-img {
+  width: 32%;
+  float: left;
+  position: relative;
+  padding-bottom: 32%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  overflow: hidden;
+}
+.media .media-imgs .media-img:nth-child(3n) {
+  margin-right: 0;
+}
+.media .media-imgs .media-img a {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+}
+
+.padding {
+  padding: 0 15px;
+}
+.location a{
+  color: #ff8e26;
+  display: block;
+  padding: 2px 0 12px;
+}
+.avatars {
+  overflow: hidden;
+  padding-bottom: 15px;
+}
+.avatars li {
+  width: 36px;
+  height: 36px;
+  border-radius: 3px;
+  overflow: hidden;
+  float: left;
+  margin-right: 10px;
+}
+.avatars li:last-child {
+  line-height: 36px;
+  background-color: #f3f5f9;
+  width: auto !important;
+  padding: 0 8px;
+}
+.avatars li:last-child span i {
+  color: #ff4d5f;
+  margin-right: 4px;
+  font-size: 17px;
+}
+.avatars li img, .coupons img, .media .media-imgs .media-img a img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.coupons {
+  background-color: #f3f5f9;
+  padding: 3.5% 5%;
+}
+
+.comment {
+  padding: 18px 0 15px 65px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+.comment .avatar {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.comment .nickname {
+  color: #6c6c6c;
+  font-size: 13px;
+}
+.comment .time {
+  color: #aeaeae;
+  font-size: 13px;
+  margin-top: 6px;
+}
+.comment .comment-con {
+  margin-top: 10px;
+}
+.comment .appreciate {
+  position: absolute;
+  right: 0px;
+  top: 18px;
+  font-size: 18px;
+}
+.comment .appreciate .checked{
+  color: #ff4d5f;
+}
+
+@media screen and (min-width:1024px) {
+  body {
+    width: 750px;
+    margin: 0 auto;
+  }
+  .header {
+    width: 750px;
+    left: 50%;
+    margin-left: -375px;
+  }
+}
